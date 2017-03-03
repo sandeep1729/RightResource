@@ -1,5 +1,0 @@
-{
-  "url": "https://gateway.watsonplatform.net/personality-insights/api",
-  "username": "f1bef7d4-3b99-4e3e-8d67-f955cf3644fc",
-  "password": "z4e6XGlbwHtL"
-}
