@@ -1,0 +1,128 @@
+<div class="'container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1">
+			<h1> Add Candidate </h1>
+			<form (ngSubmit)="onSubmit(f)" #f= "ngForm">
+				<div>
+					<div class="form-group">
+						<label for="firstName">First Name </label>
+						<input type="text" 
+								class="form-control" 
+								id="firstName"
+							 	ngModel
+							 	name="firstName"
+							 	required>		
+					</div>
+					<div class="form-group">
+						<label for="middleName"> Middle Name </label>
+						<input type="text" 
+								class="form-control" 
+								id="middleName"
+							 	ngModel
+							 	name="middleName">		
+					</div>
+					<div class="form-group">
+						<label for="lastName"> Last Name </label>
+						<input type="text" 
+								class="form-control" 
+								id="lastName"
+							 	ngModel
+							 	name="lastName"
+							 	required>		
+					</div>
+					<div class="form-group">
+						<label for="phoneNumber"> Phone Number </label>
+						<input type="tel" 
+								class="form-control" 
+								id="phoneNumber"
+							 	ngModel
+							 	name="phoneNumber"
+							 	pattern="/^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/">		
+					</div>
+					<div class="form-group">
+						<label for="Email"> Email </label>
+						<input type="email" 
+								class="form-control" 
+								id="Email"
+							 	ngModel
+							 	name="Email">		
+					</div>
+					<div class="form-group">
+						<label for="Website"> Website </label>
+						<input type="text" 
+								class="form-control" 
+								id="Website"
+							 	ngModel
+							 	name="Website">		
+					</div>
+					<div class="form-group">
+						<label for="address"> Address </label>
+						<textarea class="form-control"
+									id="address"
+									ngModel
+									name="address" 
+									rows="2"
+									cols="10" 
+									></textarea>	
+					</div>
+					<div class="form-group">
+						<label for="city"> City </label>
+						<input type="text" 
+								class="form-control" 
+								id="city"
+							 	ngModel
+							 	name="city">		
+					</div>
+					<div class="form-group">
+						<label for="state"> State </label>
+						<input type="text" 
+								class="form-control" 
+								id="state"
+							 	ngModel
+							 	name="state">		
+					</div>
+					<div class="form-group">
+						<label for="postalCode"> Postal Code </label>
+						<input type="number" 
+								class="form-control" 
+								id="postalCode"
+							 	ngModel
+							 	name="postalCode"
+							 	maxlength="5">		
+					</div>
+					<div class="form-group">
+						<label for="keySkills"> Key Skills </label>
+						<textarea class="form-control"
+									id="keySkills"
+									ngModel
+									name="keySkills" 
+									rows="2"
+									cols="10" 
+									></textarea>			
+					</div>
+					<div class="form-group">
+						<label for="resume"> Resume 
+							<button type="submit" class="btn btn-default btn-xs">
+				    			choose file 
+				  			</button>
+				  			<button type="submit" class="btn btn-default btn-xs" type="button">
+				    			Upload
+				  			</button>
+				 		</label>
+						<textarea class="form-control"
+									id="resume"
+									ngModel
+									name="resume" 
+									rows="10"
+									cols="30" 
+									> </textarea>		
+					</div>
+					<button type="submit" class="btn btn-primary btn-sm"> Add Candidate </button>
+					<button type="button" class="btn btn-primary btn-sm"> Reset </button>
+				</div>
+			</form>
+		</div>
+	</div>	
+</div>
+
+
