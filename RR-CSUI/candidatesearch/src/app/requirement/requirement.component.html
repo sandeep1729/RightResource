@@ -1,0 +1,81 @@
+<div class="'container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1">
+			<h1> Add Requirement </h1>
+			<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+				<div>
+					<div class="form-group">
+						<label for="title"> Title</label>
+						<input type="text" 
+								class="form-control" 
+								id="title"
+							 	ngModel
+							 	name="title"
+							 	required>		
+					</div>
+					<div class="form-group">
+						<label for="company"> Company </label>
+						<input type="text" 
+								class="form-control" 
+								id="company"
+							 	ngModel
+							 	name="company"
+							 	required="">		
+					</div>
+					<div class="form-group">
+						<label for="phone"> Phone </label>
+						<input type="tel" 
+								class="form-control" 
+								id="phone"
+							 	ngModel
+							 	name="phone"
+							 	required
+							 	pattern="/^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/">		
+					</div>
+					<div class="form-group">
+						<label for="email"> Email </label>
+						<input type="text" 
+								class="form-control" 
+								id="email"
+							 	ngModel
+							 	name="email"
+							 	required="">		
+					</div>
+					<div class="form-group">
+						<label for="location"> Location </label>
+						<input type="text" 
+								class="form-control" 
+								id="location"
+							 	ngModel
+							 	name="location">		
+					</div>
+					<div class="form-group">
+						<label for="duration"> Duration </label>
+						<input type="text" 
+								class="form-control" 
+								id="duration"
+							 	ngModel
+							 	name="duration">		
+					</div>
+					<div class="form-group">
+						<label for="postalCode"> Job Description </label>
+						<textarea class="form-control"
+									id="jobDescription"
+									ngModel
+									name="jobDescription" 
+									rows="10"
+									cols="30"
+									required> 
+						</textarea>	
+					</div>
+					
+					<button type="submit" class="btn btn-primary btn-sm"> Add Requirement </button>
+					<button type="button" class="btn btn-primary btn-sm"> Reset </button>
+				</div>
+			</form>			
+		</div>
+	</div>	
+</div>
+
+
+

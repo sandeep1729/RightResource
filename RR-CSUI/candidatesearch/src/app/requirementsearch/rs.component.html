@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-3"> 
+     <h1> Requirement Search </h1>
+     <br>
+      <form  class="form-inline" #f="ngForm" novalidate (ngSubmit)="save(f.value, f.valid)">
+        <div class="form-group">
+          <label for="keyword"> Keyword </label>
+          <input type="text"
+                  id="keyword" 
+                  class="form-control" 
+                  name="name" [(ngModel)]="user.name" 
+                  #name="ngModel" 
+                  placeholder=" requirement " 
+                  required >
+        </div>
+        &nbsp;
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" 
+                  class="form-control"
+                  id="locations" 
+                  name="location" 
+                  placeholder="location" 
+                  [(ngModel)]="user.address.location"
+                  #location="ngModel" 
+                  required>
+        </div>
+        <button type="submit" class="btn btn-primary"> Submit </button>
+      </form>
+    </div>
+  </div>
+  
+
+
+  <!-- <div class="margin-20">
+    <div>Form details:-</div>
+    <pre>Is form valid?: <br>{{f.valid | json}}</pre>
+    <pre>Is form submitted?: <br>{{f.submitted | json}}</pre>
+    <pre>form value: <br>{{f.value | json}}</pre>
+  </div>
+</div> -->
