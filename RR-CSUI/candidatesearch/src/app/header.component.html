@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar  navbar-default">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,25 +8,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" [routerLink]="['/home']">Right Resource</a>
+      <a class="navbar-brand" [routerLink]="['/home']"> Right Resource </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav nav-pills navbar-right">
-        <li><a [routerLink]="['/candidatesearch']"> Candidate search </a></li>
-        <li><a [routerLink]="['/requirementsearch']"> requirement Search </a></li>
+        <li><a [routerLink]="['/candidatesearch']"> Candidate <fa [name]="'search'"> </fa> </a></li>
+        <li><a [routerLink]="['/requirementsearch']"> requirement <fa [name]="'search'"> </fa></a></li>
         <li role="presentation" class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">
-            Add <span class="caret"></span>
+            Add <fa [name]="'plus'"></fa> <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a [routerLink]="['/candidate']"> Add Candidate </a></li>
-            <li><a [routerLink]="['/requirement']"> Add Requirement </a></li>
+            <li><a [routerLink]="['/candidate']"> Add Candidate <fa [name]="'user'"></fa> </a></li>
+            <li><a [routerLink]="['/requirement']"> Add Requirement <fa [name]="'file'"></fa></a></li>
+            <li><a [routerLink]="['/adduser']"> Add user <fa [name]="'user-plus'"></fa> </a></li>
+            <li><a [routerLink]="['/addmailbox']"> Add Mailbox <fa [name]="'envelope'"></fa> </a></li>
           </ul>
         </li>
-        <li><a [routerLink]="['/']"> Reports </a></li>
-        <li><a [routerLink]="['/email']"> Login </a></li>
+        <li><a [routerLink]="['/reports']"> Reports <fa [name]="'server'"></fa></a></li>
+        <li><a [routerLink]="['/email']"> <fa [name]="'sign-in'"></fa>Login </a></li>
       </ul>
     </div> <!-- /.navbar-collapse -->
   </div> <!-- /.container-fluid -->

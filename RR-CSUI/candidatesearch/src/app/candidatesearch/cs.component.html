@@ -5,7 +5,7 @@
      <br>
       <form  class="form-inline" #f="ngForm" novalidate (ngSubmit)="save(f.value, f.valid)">
         <div class="form-group">
-          <label for="keyword"> Name </label>
+          <label for="keyword"> Keyword </label>
           <input type="text"
                   id="keyword" 
                   class="form-control" 
@@ -26,10 +26,11 @@
                   #location="ngModel" 
                   required>
         </div>
-        <button type="submit" class="btn btn-primary"> Submit </button>
+        <button type="submit" class="btn btn-primary"> Search <fa [name]="'search'"></fa> </button>
       </form>
     </div>
   </div>
+</div>
   
 
 
