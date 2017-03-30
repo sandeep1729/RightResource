@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Requirement</title>
+</head>
+<body>
+	<a href="addUI">Add Requirement</a>&nbsp;&nbsp;
+	<a href="listUI">List Requirements</a>&nbsp;&nbsp;
+	<a href="searchUI">Search Requirements</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../candidate/addUI">Add Candidate</a>&nbsp;&nbsp;
+	<a href="../candidate/listUI">List Candidates</a>&nbsp;&nbsp;
+	<a href="../candidate/searchUI">Search Candidates</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../email/addUI">Load Email</a>&nbsp;&nbsp;
+	<a href="../email/listUI">List Email</a>&nbsp;&nbsp;
+	<a href="../email/searchUI">Search Email</a>&nbsp;&nbsp;
+	<h1>Add Requirement</h1>
+	<form action="#" data-th-action="@{/requirement/saveUI}"
+		data-th-object="${requirementForm}" method="post"
+		enctype="multipart/form-data">
+		<p>
+			Name: <input type="text" th:field="*{name}" />
+		</p>
+		<p>
+			Vendor: <input type="text" th:field="*{vendor}" />
+		</p>
+		<p>
+			Skills: <input type="text" th:field="*{skills}" />
+		</p>
+		<p>
+			Client: <input type="text" th:field="*{client}" />
+		</p>
+		<p>
+			Email: <input type="text" th:field="*{email}" />
+		</p>
+		<p>
+			Phone: <input type="text" th:field="*{phone}" />
+		</p>
+		<p>
+			Location: <input type="text" th:field="*{location}" />
+		</p>
+
+		<p>
+			<a th:href="@{'/requirement/load/' + ${id}}"> <span
+				th:text="*{requirementName}"></span></a>
+		</p>
+		<p>
+			File to upload: <input type="file" name="file" />
+		</p>
+		<input type="hidden" th:field="*{id}" /> <input type="hidden"
+			th:field="*{requirementName}" /> <br></br>
+		<button type="submit" name="action" value="save">Save Details</button>
+	</form>
+</body>
+</html>

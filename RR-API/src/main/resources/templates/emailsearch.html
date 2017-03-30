@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Requirement</title>
+</head>
+<body>
+	<a href="../requirement/addUI">Add Requirement</a>&nbsp;&nbsp;
+	<a href="../requirement/listUI">List Requirements</a>&nbsp;&nbsp;
+	<a href="../requirement/searchUI">Search Requirements</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../candidate/addUI">Add Candidate</a>&nbsp;&nbsp;
+	<a href="../candidate/listUI">List Candidates</a>&nbsp;&nbsp;
+	<a href="../candidate/searchUI">Search Candidates</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="addUI">Load Email</a>&nbsp;&nbsp;
+	<a href="listUI">List Email</a>&nbsp;&nbsp;
+	<a href="searchUI">Search Email</a>&nbsp;&nbsp;
+
+	<h1>Search Email</h1>
+	<form action="#" data-th-action="@{/email/from}"
+		data-th-object="${emailForm}" method="post">
+		<p>
+			Mail from: <input type="text" th:field="*{from}" th:value="*{from}" />
+			<button type="submit" name="action" value="save">From
+				Address Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/email/to}"
+		data-th-object="${emailForm}" method="post">
+		<p>
+			Mail To: <input type="text" th:field="*{to}" th:value="*{to}" />
+			<button type="submit" name="action" value="save">To Address
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/email/subject}"
+		data-th-object="${emailForm}" method="post">
+		<p>
+			Subject: <input type="text" th:field="*{subject}"
+				th:value="*{subject}" />
+			<button type="submit" name="action" value="save">Subject
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/email/sentDate}"
+		data-th-object="${emailForm}" method="post">
+		<p>
+			Sent Date: <input type="text" th:field="*{sentDate}"
+				th:value="*{sentDate}" />
+			<button type="submit" name="action" value="save">Sent Date
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/email/messageContent}"
+		data-th-object="${emailForm}" method="post">
+		<p>
+			Message Content: <input type="text" th:field="*{messageContent}"
+				th:value="*{messageContent}" />
+			<button type="submit" name="action" value="save">Message
+				Content Search</button>
+		</p>
+	</form>
+</body>
+</html>

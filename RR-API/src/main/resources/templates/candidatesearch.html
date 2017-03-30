@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Candidate</title>
+</head>
+<body>
+	<a href="../requirement/addUI">Add Requirement</a>&nbsp;&nbsp;
+	<a href="../requirement/listUI">List Requirements</a>&nbsp;&nbsp;
+	<a href="../requirement/searchUI">Search Requirements</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="addUI">Add Candidate</a>&nbsp;&nbsp;
+	<a href="listUI">List Candidates</a>&nbsp;&nbsp;
+	<a href="searchUI">Search Candidates</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../email/addUI">Load Email</a>&nbsp;&nbsp;
+	<a href="../email/listUI">List Email</a>&nbsp;&nbsp;
+	<a href="../email/searchUI">Search Email</a>&nbsp;&nbsp;
+	<h1>Search Candidate</h1>
+	<form action="#" data-th-action="@{/candidate/name}"
+		data-th-object="${candidateForm}" method="post">
+		<p>
+			Name: <input type="text" th:field="*{fName}" th:value="*{fName}" />
+			<button type="submit" name="action" value="save">Name Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/candidate/location}"
+		data-th-object="${candidateForm}" method="post">
+		<p>
+			Location: <input type="text" th:field="*{location}"
+				th:value="*{location}" />
+			<button type="submit" name="action" value="save">Location
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/candidate/phone}"
+		data-th-object="${candidateForm}" method="post">
+		<p>
+			Phone: <input type="text" th:field="*{phone}" th:value="*{phone}" />
+			<button type="submit" name="action" value="save">Phone
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/candidate/email}"
+		data-th-object="${candidateForm}" method="post">
+		<p>
+			Email: <input type="text" th:field="*{email}" th:value="*{email}" />
+			<button type="submit" name="action" value="save">Phone
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/candidate/skills}"
+		data-th-object="${candidateForm}" method="post">
+		<p>
+			Skills: <input type="text" th:field="*{skills}" th:value="*{skills}" />
+			<button type="submit" name="action" value="save">Phone
+				Search</button>
+		</p>
+	</form>
+</body>
+</html>

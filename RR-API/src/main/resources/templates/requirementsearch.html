@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Requirement</title>
+</head>
+<body>
+	<a href="addUI">Add Requirement</a>&nbsp;&nbsp;
+	<a href="listUI">List Requirements</a>&nbsp;&nbsp;
+	<a href="searchUI">Search Requirements</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../candidate/addUI">Add Candidate</a>&nbsp;&nbsp;
+	<a href="../candidate/listUI">List Candidates</a>&nbsp;&nbsp;
+	<a href="../candidate/searchUI">Search Candidates</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../email/addUI">Load Email</a>&nbsp;&nbsp;
+	<a href="../email/listUI">List Email</a>&nbsp;&nbsp;
+	<a href="../email/searchUI">Search Email</a>&nbsp;&nbsp;
+	<h1>Search Requirement</h1>
+	<form action="#" data-th-action="@{/requirement/name}"
+		data-th-object="${requirementForm}" method="post">
+		<p>
+			Name: <input type="text" th:field="*{name}" th:value="*{name}" />
+			<button type="submit" name="action" value="save">Name Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/requirement/vendor}"
+		data-th-object="${requirementForm}" method="post">
+		<p>
+			Vendor: <input type="text" th:field="*{vendor}" th:value="*{vendor}" />
+			<button type="submit" name="action" value="save">Vendor
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/requirement/client}"
+		data-th-object="${requirementForm}" method="post">
+		<p>
+			Client: <input type="text" th:field="*{client}" th:value="*{client}" />
+			<button type="submit" name="action" value="save">Client
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/requirement/location}"
+		data-th-object="${requirementForm}" method="post">
+		<p>
+			Location: <input type="text" th:field="*{location}"
+				th:value="*{location}" />
+			<button type="submit" name="action" value="save">Location
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/requirement/phone}"
+		data-th-object="${requirementForm}" method="post">
+		<p>
+			Phone: <input type="text" th:field="*{phone}" th:value="*{phone}" />
+			<button type="submit" name="action" value="save">Phone
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/requirement/email}"
+		data-th-object="${requirementForm}" method="post">
+		<p>
+			Email: <input type="text" th:field="*{email}" th:value="*{email}" />
+			<button type="submit" name="action" value="save">Phone
+				Search</button>
+		</p>
+	</form>
+	<form action="#" data-th-action="@{/requirement/skills}"
+		data-th-object="${requirementForm}" method="post">
+		<p>
+			Skills: <input type="text" th:field="*{skills}" th:value="*{skills}" />
+			<button type="submit" name="action" value="save">Phone
+				Search</button>
+		</p>
+	</form>
+</body>
+</html>

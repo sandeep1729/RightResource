@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>List</title>
+</head>
+<body>
+	<a href="addUI">Add Requirement</a>&nbsp;&nbsp;
+	<a href="listUI">List Requirements</a>&nbsp;&nbsp;
+	<a href="searchUI">Search Requirements</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../candidate/addUI">Add Candidate</a>&nbsp;&nbsp;
+	<a href="../candidate/listUI">List Candidates</a>&nbsp;&nbsp;
+	<a href="../candidate/searchUI">Search Candidates</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../email/addUI">Load Email</a>&nbsp;&nbsp;
+	<a href="../email/listUI">List Email</a>&nbsp;&nbsp;
+	<a href="../email/searchUI">Search Email</a>&nbsp;&nbsp;
+	<h1>List Requirements</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Sl.No</th>
+				<th>Name</th>
+				<th>Vendor</th>
+				<th>Skills</th>
+				<th>Client</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Location</th>
+				<th>Requirement</th>
+				<th>Update</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="requirement,iterationStatus  : ${listRequirement}">
+				<td th:text="${iterationStatus.count}"></td>
+				<td th:text="${requirement.name}"></td>
+				<td th:text="${requirement.vendor}"></td>
+				<td th:text="${requirement.skills}"></td>
+				<td th:text="${requirement.client}"></td>
+				<td th:text="${requirement.email}"></td>
+				<td th:text="${requirement.phone}"></td>
+				<td th:text="${requirement.location}"></td>
+				<td><a th:href="@{'/requirement/load/' + ${requirement.id}}"
+					th:text="${requirement.requirementName}"></a></td>
+				<td><a
+					th:href="@{'/requirement/updateUI/' + ${requirement.id}}">Update</a></td>
+				<td><a
+					th:href="@{'/requirement/deleteUI/' + ${requirement.id}}">Delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

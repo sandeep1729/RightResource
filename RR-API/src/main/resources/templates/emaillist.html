@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>List</title>
+</head>
+<body>
+	<a href="../requirement/addUI">Add Requirement</a>&nbsp;&nbsp;
+	<a href="../requirement/listUI">List Requirements</a>&nbsp;&nbsp;
+	<a href="../requirement/searchUI">Search Requirements</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../candidate/addUI">Add Candidate</a>&nbsp;&nbsp;
+	<a href="../candidate/listUI">List Candidates</a>&nbsp;&nbsp;
+	<a href="../candidate/searchUI">Search Candidates</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="addUI">Load Email</a>&nbsp;&nbsp;
+	<a href="listUI">List Email</a>&nbsp;&nbsp;
+	<a href="searchUI">Search Email</a>&nbsp;&nbsp;
+	<h1>List Email</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Sl.No</th>
+				<th>To Address</th>
+				<th>From Address</th>
+				<th>Sent Date</th>
+				<th>Subject</th>
+				<th>Attachments</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="email,iterationStatus  : ${listEmail}">
+				<td th:text="${iterationStatus.count}"></td>
+				<td th:text="${email.to}"></td>
+				<td th:text="${email.from}"></td>
+				<td th:text="${email.sentDate}"></td>
+				<td><a th:href="@{'/email/content/' + ${email.id}}"
+					th:text="${email.subject}"></a></td>
+				<td><a th:href="@{'/email/load/I/' + ${email.id}}"
+					th:text="${email.attachmentI}"></a><a
+					th:href="@{'/email/load/II/' + ${email.id}}"
+					th:text="${email.attachmentII}"></a><a
+					th:href="@{'/email/load/III/' + ${email.id}}"
+					th:text="${email.attachmentIII}"></a><a
+					th:href="@{'/email/load/IV/' + ${email.id}}"
+					th:text="${email.attachmentIV}"></a></td>
+				<td><a th:href="@{'/email/deleteUI/' + ${email.id}}">Delete</a></td>
+
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
