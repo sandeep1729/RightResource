@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Candidate</title>
+</head>
+<body>
+	<a href="../requirement/addUI">Add Requirement</a>&nbsp;&nbsp;
+	<a href="../requirement/listUI">List Requirements</a>&nbsp;&nbsp;
+	<a href="../requirement/searchUI">Search Requirements</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../candidate/addUI">Add Candidate</a>&nbsp;&nbsp;
+	<a href="../candidate/listUI">List Candidates</a>&nbsp;&nbsp;
+	<a href="../candidate/searchUI">Search Candidates</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="addUI">Load Email</a>&nbsp;&nbsp;
+	<a href="listUI">List Email</a>&nbsp;&nbsp;
+	<a href="searchUI">Search Email</a>&nbsp;&nbsp;
+	<h1>Load Email</h1>
+	<form action="#" data-th-action="@{/email/receiveUI}"
+		data-th-object="${emailForm}" method="post"
+		enctype="multipart/form-data">
+		<p>
+			UserName: <input type="text" th:field="*{user}" />
+		</p>
+		<p>
+			Password: <input type="password" th:field="*{pwd}" />
+		</p>
+		<p>
+			Host: <input type="text" th:field="*{host}" />pop.gmail.com
+		</p>
+		<p>
+			Port: <input type="text" th:field="*{port}" />995
+		</p>
+
+		<br></br>
+		<button type="submit" name="action" value="save">Load Email</button>
+	</form>
+</body>
+</html>
